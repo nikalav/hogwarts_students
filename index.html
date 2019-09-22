@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hogwarts student list</title>
+  </head>
+  <body>
+    <img id="header_img" src="images/hogwarts.png" />
+    <!-- <img id="background_img" src="images/background.jpg" /> -->
+    <h1>Hogwarts Student List</h1>
+    <div id="countWrapper">
+      <h3 id="studentCount"></h3>
+      <h3 id="studentExpelled"></h3>
+      <h3 id="gryffindorCount"></h3>
+      <h3 id="hufflepuffCount"></h3>
+      <h3 id="ravenclawCount"></h3>
+      <h3 id="slytherinCount"></h3>
+    </div>
+    <div id="filter">
+      Filter:
+      <button type="button" class="gryffindor">Gryffindor</button>
+      <button type="button" class="hufflepuff">Hufflepuff</button>
+      <button type="button" class="ravenclaw">Ravenclaw</button>
+      <button type="button" class="slytherin">Slytherin</button>
+      <button type="button" class="all">All</button>
+    </div>
+    <p id="sort_student">
+      <label>
+        Sort by:
+        <select id="sorting">
+          <option value="option" class="chooseOption">Choose</option>
+          <option value="firstname" class="firstNameSort">First name</option>
+          <option value="lastname" class="lastNameSort">Last name</option>
+          <option value="house" class="houseSort">House</option>
+        </select>
+      </label>
+    </p>
+
+    <table id="list">
+      <thead>
+        <tr>
+          <th class="sortbyFirstname" data-sort="firstname">First name</th>
+          <th class="sortbyLastname" data-sort="lastname">Last name</th>
+          <th class="sortbyhouse" data-sort="house">House</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="modal hide">
+      <article class="modal-content">
+        <button class="closeBtn">x</button>
+        <img class="house_crest" src="crest" alt="house crest" />
+        <h2>NAME</h2>
+        <h3 class="blood">BLOOD</h3>
+        <img class="studentImg" src="student-image" alt="img" />
+        <p class="signExpel">EXPELLED</p>
+      </article>
+    </div>
+    <template id="studentList">
+      <tr>
+        <td data-field="firstName">First Name</td>
+        <td data-field="lastName">Last Name</td>
+        <td data-field="house">House</td>
+        <td><button data-action="info" class="showModal">See More</button></td>
+        <td><button data-action="expel" data-attribute="id">EXPEL</button></td>
+        <td data-field="expeledStatus"></td>
+      </tr>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>

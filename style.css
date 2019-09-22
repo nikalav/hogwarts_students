@@ -1,0 +1,131 @@
+#header_img {
+  max-width: 100%;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+/* #background_img {
+  max-width: 100%;
+  background: no-repeat fixed center;
+} */
+#countWrapper {
+  text-align: center;
+}
+#filter,
+#sort_student {
+  text-align: center;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+body {
+  background: url(images/background.jpg) no-repeat fixed center;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Magic School;
+  src: url(https://www.1001fonts.com/magic-school-font.html);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 2em;
+  font-family: Magic School One, serif;
+  font-size: 30pt;
+}
+article {
+  text-align: left;
+  background-color: #c7a07c;
+}
+img {
+  max-width: 100%;
+}
+
+.hide {
+  display: none;
+}
+.modal-content img {
+  width: auto;
+  float: right;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  width: 40%;
+  height: 40%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 25px;
+}
+button {
+  border-radius: 1em;
+  border-color: #846a6a;
+  background-color: #cebbb6;
+}
+.expelledstyle {
+  color: red;
+}
+[data-field="expelledStatus"] {
+  color: red;
+}
+.house_crest {
+  max-width: 100%;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+/* house themes */
+[data-theme="Gryffindor"] {
+  --background-color: #4d1414;
+  --text-color: #000;
+}
+[data-theme="Hufflepuff"] {
+  --background-color: #968d0d;
+  --text-color: #000;
+}
+[data-theme="Ravenclaw"] {
+  --background-color: #123052;
+  --text-color: #000;
+}
+[data-theme="Slytherin"] {
+  --background-color: #18441a;
+  --text-color: #000;
+}
+
+@media all and (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal-content {
+    width: 50%;
+    height: 60%;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    width: 60%;
+    height: 60%;
+    justify-content: center;
+  }
+}
